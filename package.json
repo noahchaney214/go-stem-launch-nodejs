@@ -1,0 +1,25 @@
+{
+  "name": "go-stem-launch-node",
+  "version": "1.0.0",
+  "description": "GO STEM's new and improved landing site.",
+  "main": "server.js",
+  "scripts": {
+    "watch": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "noahchaney",
+  "license": "ISC",
+  "homepage": "https://go-stem.org/",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jquery": "^3.6.4",
+    "mysql": "^2.18.1",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

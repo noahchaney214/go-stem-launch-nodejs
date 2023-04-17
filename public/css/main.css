@@ -1,0 +1,84 @@
+.card-deck {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    margin: auto;
+    display: flex;
+    z-index: 0;
+    flex: 1;
+    max-height: 450px;
+    max-width: 300px;
+}
+
+.card:hover {
+    animation-name: card-hover;
+    animation-duration: 0.25s;
+    scale: 1.15;
+    z-index: 1;
+}
+
+
+@keyframes card-hover {
+    from {scale: 1.0;}
+    to {scale: 1.15;}
+}
+
+.carousel-item img {
+    max-width: 70%;
+    horiz-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 90vh;
+}
+
+.about h2, .about h3, .about h4, .about h5{
+    text-align: center;
+}
+
+.navbar {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+.carousel button {
+    border: none;
+    background-color: rgba(20, 100, 0, 3);
+    max-width: 15%;
+}
+
+header {
+    background-color: black;
+    height: 100%;
+    text-align: center;
+}
+
+.header {
+    height: 150px;
+    top: 7vh;
+    position: relative;
+}
+
+
+header h2 {
+    line-height: 170px;
+    color: lightgray;
+
+}
+
+.navbar-brand img{
+    min-width: 120px;
+    min-height: 40px;
+}
+
+.body {
+    position: static;
+    margin-top: 10vh;
+}
+
+body .cards {
+    background-color: rgb(0, 25, 120);
+}

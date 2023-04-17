@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GO STEM - Contact Us</title>
+  <meta name="description" content="The Greater Oregon STEM Hub (GO-STEM) is one of 13 STEM hubs in Oregon working to bring together the resources of education and industry in support of STEM learning environments and career opportunities.">
+  <meta name="keywords" content="GO, Greater, Oregon, STEM, Hub, GO-STEM, go-stem, go, stem, oregon, greater, contact, us">
+  <meta name="author" content="GO STEM">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="/main.css">
+  <script src="/contact.js"></script>
+  <script src="/footer.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    label {
+      color: white;
+    }
+
+    /* Style inputs */
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=email], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=submit] {
+      background-color: #004075FF;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #005675;
+    }
+
+    /* Style the container/contact section */
+    .body.container {
+      border-radius: 5px;
+      background-color: #004075FF;
+      padding: 10px;
+      margin-bottom: 3vh;
+      width: 50%;
+    }
+
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+      #submitButton {
+        width: 100%;
+        margin-top: 0;
+      }
+      .body.container {
+        width: 100%;
+      }
+    }
+
+    #submitButton {
+      background-color: #2F8038FF;
+      color: white;
+      border-radius: 4px;
+      border: rgba(0, 0, 0, 0);
+      font-size: 20px;
+      height: 40px;
+    }
+    #submitButton:hover {
+      background-color: #39cb47;
+
+    }
+
+  </style>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed;">
+  <a class="navbar-brand" href="/" target="_self"><img src="/EOU-GOSTEM_logo_RGB.png" style="max-height: 7vh; " alt="eou go stem logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="/" target="_self">Home</a>
+      </li>
+      <li class="nav-item "><a class="nav-link" href="/about" target="_self">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="/team" target="_self">Meet the Team</a></li>
+      <li class="nav-item"><a class="nav-link" href="/lab" target="_self">Mobile Maker Lab</a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://gostem.lend-engine.com/">Lending Library</a>
+      </li>
+      <li class="nav-item active"><a class="nav-link" href="/contact" target="_self">Contact Us</a><span class="sr-only">(current)</span></li>
+    </ul>
+  </div>
+</nav>
+<!-- End of Navigation Bar -->
+
+
+<!-- FORM -->
+<div class="body container">
+  <div style="text-align:center">
+    <h2 style="color: azure">Leave us a message:</h2>
+  </div>
+  <div class="container">
+
+    <form id="contactForm" method="post">
+      <label for="fname">First Name</label>
+      <input required type="text" id="fname" name="firstname" placeholder="Your name..">
+      <label for="lname">Last Name</label>
+      <input required type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <label for="email">Email</label>
+      <input required type="email" id="email" name="email" placeholder="example@example.com">
+      <br>
+      <label for="school">School</label>
+      <input required type="text" id="school" name="school" placeholder="Your school..">
+      <label for="county" >County</label>
+      <select required id="county" name="county">
+        <option value="">Select...</option>
+        <option value="baker">Baker</option>
+        <option value="grant">Grant</option>
+        <option value="harney">Harney</option>
+        <option value="morrow">Morrow</option>
+        <option value="umatilla">Umatilla</option>
+        <option value="union">Union</option>
+        <option value="wallowa">Wallowa</option>
+        <option value="other">Other</option>
+      </select>
+      <label for="subject" style="margin-top: 20px;">Message</label>
+      <textarea required id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+      <button id="submitButton" onclick="submitContact()">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="container-flex">
+
+  <footer class="text-white text-lg-start" style="background-color: #23242a;">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row mt-4">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Mission</h5>
+          <p>
+            A regional partnership cultivating a community that values STEM learning, prepares youth for successful STEM careers, and builds pathways and pipelines to meet workforce needs.
+          </p>
+          <hr>
+          <h5 class="text-uppercase mb-4">Equal Opportunity</h5>
+          <p>
+            GO-STEM, in compliance with state and federal laws and regulations, does not discriminate on the basis of age, color, disability, gender identity or expression, genetic information, marital status, national origin, race, religion, sex, sexual orientation, or veteran status in any of its policies, procedures, or practices.</p>
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 pb-1">Sign Up For Our Newsletter!</h5>
+
+          <div class="form-outline form-white mb-4">
+            <label class="form-label" for="formControlLg" style="margin-left: 0px;">Email</label>
+            <input type="email" id="formControlLg" class="form-control form-control-lg"><button type="button" class="btn btn-primary mt-2" onclick="submit()">Submit</button>
+            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 48.8px;"></div><div class="form-notch-trailing"></div></div></div>
+
+          <ul class="fa-ul" style="margin-left: 1.65em;">
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">La Grande, OR 97850, US</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2"><a href="mailto:go-stem@eou.edu">go-stem@eou.edu</a></span>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+  </footer>
+</div>
+<!-- End of .container -->
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
