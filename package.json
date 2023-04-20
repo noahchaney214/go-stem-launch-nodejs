@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "GO STEM's new and improved landing site.",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "watch": "nodemon server.js"
   },
@@ -11,12 +12,16 @@
   "license": "ISC",
   "homepage": "https://go-stem.org/",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "bootstrap": "^5.2.3",
+    "cors": "^2.8.5",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "jquery": "^3.6.4",
+    "lru-cache": "^9.1.0",
     "mysql": "^2.18.1",
+    "node-fetch": "^3.3.1",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {

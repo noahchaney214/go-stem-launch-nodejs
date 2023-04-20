@@ -1,5 +1,4 @@
 function submitContact(){
-    let form = document.getElementById("contactForm").value;
     let fname = document.getElementById("fname").value;
     let lname = document.getElementById("lname").value;
     let email = document.getElementById("email").value;
@@ -7,4 +6,7 @@ function submitContact(){
     let countyIndx = document.getElementById('county').options.selectedIndex;
     let county = document.getElementById('county').options[countyIndx];
     let message = document.getElementById("subject").value;
+
+    console.log("hello")
+
 }

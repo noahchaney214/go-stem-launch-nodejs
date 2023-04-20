@@ -1,3 +1,3 @@
 function submit() {
-    module.exports = document.getElementById("formControlLg").value;
+    document.getElementById("formControlLg").value;
 }

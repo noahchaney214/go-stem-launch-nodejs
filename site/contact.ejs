@@ -132,17 +132,16 @@
     <h2 style="color: azure">Leave us a message:</h2>
   </div>
   <div class="container">
-
-    <form id="contactForm" method="post">
+    <form method="post" action="/action_page" id="contactForm" enctype="application/x-www-form-urlencoded">
       <label for="fname">First Name</label>
-      <input required type="text" id="fname" name="firstname" placeholder="Your name..">
+      <input required type="text" id="fname" name="firstname" placeholder="Your name.."/>
       <label for="lname">Last Name</label>
-      <input required type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <input required type="text" id="lname" name="lastname" placeholder="Your last name.."/>
       <label for="email">Email</label>
-      <input required type="email" id="email" name="email" placeholder="example@example.com">
+      <input required type="email" id="email" name="email" placeholder="example@example.com"/>
       <br>
       <label for="school">School</label>
-      <input required type="text" id="school" name="school" placeholder="Your school..">
+      <input required type="text" id="school" name="school" placeholder="Your school.."/>
       <label for="county" >County</label>
       <select required id="county" name="county">
         <option value="">Select...</option>
@@ -157,7 +156,7 @@
       </select>
       <label for="subject" style="margin-top: 20px;">Message</label>
       <textarea required id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-      <button id="submitButton" onclick="submitContact()">Submit</button>
+      <button class="btn btn-success" id="submit" value="Submit" onclick="submitContact()">Submit</button>
     </form>
   </div>
 </div>

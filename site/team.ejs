@@ -16,7 +16,57 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
 
+    .profile img {
+      max-width: 300px;
+      min-width: 200px;
+    }
+
+
+    .profile .profile-body {
+      padding: 20px;
+      background: #f7f7f7;
+      width: 100%;
+
+    }
+
+    .profile .profile-bio {
+      background: #fff;
+      position: relative;
+      padding: 15px 10px 5px 15px;
+    }
+
+    .profile .profile-bio a {
+      left: 50%;
+      bottom: 20px;
+      margin: -62px;
+      text-align: center;
+      position: absolute;
+    }
+
+    .profile .profile-bio h2 {
+      margin-top: 0;
+      font-weight: 200;
+    }
+
+    .profile h3 {
+      color: #585f69;
+      margin-top: 5px;
+      text-shadow: none;
+      font-weight: normal;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .profile h3 {
+      font-size: 24px;
+      line-height: 33px;
+    }
+
+    .profile p, .profile li, .profile li a {
+      color: #555;
+    }
+
+  </style>
 </head>
 <body>
 <!-- Navigation Bar -->
@@ -49,7 +99,50 @@
   </header>
 </div>
 
-<div class="body container" id="team">
+<div class="body container" id="team" style="margin-bottom: 3vh;">
+  <% for (let i = 0; i < teamData.length; i++) { %>
+    <% if (i % 2 === 0) { %>
+      <div class="container-flex bootstrap snippets bootdey" style="margin-bottom: 2vh;">
+        <div class="profile ">
+          <div class="profile-body">
+            <div class="profile-bio">
+              <div class="row">
+                <div class="col-md-5 text-center">
+                  <img class="img-thumbnail md-margin-bottom-10" src="<%- teamData[i].pic %>" alt="">
+                </div>
+                <div class="col-md-7">
+                  <h3><%- teamData[i].fname %> <%- teamData[i].lname %></h3>
+                  <span><strong><%- teamData[i].job %></strong></span>
+                  <hr>
+                  <p><%- teamData[i].description %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% } else { %>
+        <div class="container-flex bootstrap snippets bootdey" style="margin-bottom: 2vh;">
+          <div class="profile ">
+            <div class="profile-body">
+              <div class="profile-bio">
+                <div class="row">
+                  <div class="col-md-7">
+                    <h3><%- teamData[i].fname %> <%- teamData[i].lname %></h3>
+                    <span><strong><%- teamData[i].job %></strong></span>
+                    <hr>
+                    <p><%- teamData[i].description %></p>
+                  </div>
+                  <div class="col-md-5 text-center">
+                    <img class="img-thumbnail md-margin-bottom-10" src="<%- teamData[i].pic %>" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <% } %>
+  <% } %>
 </div>
 
 <!-- Remove the container if you want to extend the Footer to full width. -->
@@ -106,5 +199,6 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/d3@5.5.0/dist/d3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 </html>
