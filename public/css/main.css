@@ -12,6 +12,13 @@
     max-width: 300px;
 }
 
+body {
+  background-image: url("/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .card:hover {
     animation-name: card-hover;
     animation-duration: 0.25s;
