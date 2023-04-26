@@ -11,6 +11,7 @@
   <link rel="icon" type="image/x-icon" src="/favicon.ico">
 
   <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="/profile.css">
   <script src="/main.js"></script>
   <script src="/footer.js"></script>
 
@@ -50,19 +51,32 @@
 </div>
 
 <div class="body container" >
-  <h3 class="mb-4">Welcome to the Mobile Maker Lab!</h3>
+  <div class="container-flex bootstrap snippets bootdey" style="margin-bottom: 2vh; margin-top: 2vh;">
+    <div class="profile ">
+      <div class="profile-body">
+        <div class="profile-bio">
+          <div class="row">
+            <div class="col-md">
+              <h3 class="mb-4">Welcome to the Mobile Maker Lab!</h3>
 
 
-  <p class="mb-4">This innovative project is designed to bring STEM to you and your students.  Equipped with everything needed to thrust students and teachers into STEM experiences, the MML will come to your school, set-up a mini classroom, and offer the kinds of STEM materials, lessons, and curriculum you believe would be effective in educating and motivating students to pursue STEM further.</p>
+              <p class="mb-4">This innovative project is designed to bring STEM to you and your students.  Equipped with everything needed to thrust students and teachers into STEM experiences, the MML will come to your school, set-up a mini classroom, and offer the kinds of STEM materials, lessons, and curriculum you believe would be effective in educating and motivating students to pursue STEM further.</p>
 
 
-  <p class="mb-4">The MML consists of a van designed to pull the trailer and act as materials and tools storage repository. The trailer has both storage and work space that will facilitate STEM explorations, especially in engineering and NGSS-based science instruction.</p>
+              <p class="mb-4">The MML consists of a van designed to pull the trailer and act as materials and tools storage repository. The trailer has both storage and work space that will facilitate STEM explorations, especially in engineering and NGSS-based science instruction.</p>
 
 
-  <p class="mb-4">The MML Lab is self-contained and sustaining operation as it uses solar panels and a sophisticated electrical system that can also charge an EV.  The solar system is designed to invite students to collect and analyze data in order to understand the efficacy of solar electrical systems and their application to consumer needs.</p>
+              <p class="mb-4">The MML Lab is self-contained and sustaining operation as it uses solar panels and a sophisticated electrical system that can also charge an EV.  The solar system is designed to invite students to collect and analyze data in order to understand the efficacy of solar electrical systems and their application to consumer needs.</p>
 
 
-  <p class="mb-4">For more information about the MML and to schedule your school visit/s, contact David Melville at <a href="mailto:dmelville@eou.edu">dmelville@eou.edu</a></p>
+              <p class="mb-4">For more information about the MML and to schedule your school visit/s, contact David Melville at <a href="mailto:dmelville@eou.edu">dmelville@eou.edu</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- Remove the container if you want to extend the Footer to full width. -->
@@ -92,8 +106,10 @@
           <h5 class="text-uppercase mb-4 pb-1">Sign Up For Our Newsletter!</h5>
 
           <div class="form-outline form-white mb-4">
-            <label class="form-label" for="formControlLg" style="margin-left: 0px;">Email</label>
-            <input type="email" id="formControlLg" class="form-control form-control-lg"><button type="button" class="btn btn-primary mt-2" onclick="submit()">Submit</button>
+            <form method="POST" id="emailSubmit" enctype="application/x-www-form-urlencoded">
+              <label class="form-label" for="formControlLg" style="margin-left: 0px;">Email</label>
+              <input name="email" type="email" id="formControlLg" class="form-control form-control-lg"><button type="button" class="btn btn-primary mt-2" onclick="submit()">Submit</button>
+            </form>
             <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 48.8px;"></div><div class="form-notch-trailing"></div></div></div>
 
           <ul class="fa-ul" style="margin-left: 1.65em;">

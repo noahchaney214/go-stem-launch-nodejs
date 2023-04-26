@@ -1,0 +1,40 @@
+.profile img {
+    max-width: 300px;
+    min-width: 200px;
+}
+
+
+.profile .profile-body {
+    padding: 20px;
+    background: #f7f7f7;
+    width: 100%;
+
+}
+
+.profile .profile-bio {
+    background: #fff;
+    position: relative;
+    padding: 15px 10px 5px 15px;
+}
+
+
+.profile .profile-bio h2 {
+    margin-top: 0;
+    font-weight: 200;
+}
+
+.profile h3 {
+    color: #585f69;
+    margin-top: 5px;
+    text-shadow: none;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+}
+.profile h3 {
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.profile p, .profile li {
+    color: #555;
+}

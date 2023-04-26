@@ -125,90 +125,42 @@
 </nav>
 <!-- End of Navigation Bar -->
 
-
-<!-- FORM -->
-<div class="body container">
-  <div style="text-align:center">
-    <h2 style="color: azure">Leave us a message:</h2>
-  </div>
-  <div class="container">
-    <form method="post" action="/action_page" id="contactForm" enctype="application/x-www-form-urlencoded">
-      <label for="fname">First Name</label>
-      <input required type="text" id="fname" name="firstname" placeholder="Your name.."/>
-      <label for="lname">Last Name</label>
-      <input required type="text" id="lname" name="lastname" placeholder="Your last name.."/>
-      <label for="email">Email</label>
-      <input required type="email" id="email" name="email" placeholder="example@example.com"/>
-      <br>
-      <label for="school">School</label>
-      <input required type="text" id="school" name="school" placeholder="Your school.."/>
-      <label for="county" >County</label>
-      <select required id="county" name="county">
-        <option value="">Select...</option>
-        <option value="baker">Baker</option>
-        <option value="grant">Grant</option>
-        <option value="harney">Harney</option>
-        <option value="morrow">Morrow</option>
-        <option value="umatilla">Umatilla</option>
-        <option value="union">Union</option>
-        <option value="wallowa">Wallowa</option>
-        <option value="other">Other</option>
-      </select>
-      <label for="subject" style="margin-top: 20px;">Message</label>
-      <textarea required id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-      <button class="btn btn-success" id="submit" value="Submit" onclick="submitContact()">Submit</button>
-    </form>
-  </div>
-</div>
-
-<!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="container-flex">
-
-  <footer class="text-white text-lg-start" style="background-color: #23242a;">
-    <!-- Grid container -->
-    <div class="container p-4">
-      <!--Grid row-->
-      <div class="row mt-4">
-        <!--Grid column-->
-        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-4">Mission</h5>
-          <p>
-            A regional partnership cultivating a community that values STEM learning, prepares youth for successful STEM careers, and builds pathways and pipelines to meet workforce needs.
-          </p>
-          <hr>
-          <h5 class="text-uppercase mb-4">Equal Opportunity</h5>
-          <p>
-            GO-STEM, in compliance with state and federal laws and regulations, does not discriminate on the basis of age, color, disability, gender identity or expression, genetic information, marital status, national origin, race, religion, sex, sexual orientation, or veteran status in any of its policies, procedures, or practices.</p>
-
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-4 pb-1">Sign Up For Our Newsletter!</h5>
-
-          <div class="form-outline form-white mb-4">
-            <label class="form-label" for="formControlLg" style="margin-left: 0px;">Email</label>
-            <input type="email" id="formControlLg" class="form-control form-control-lg"><button type="button" class="btn btn-primary mt-2" onclick="submit()">Submit</button>
-            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 48.8px;"></div><div class="form-notch-trailing"></div></div></div>
-
-          <ul class="fa-ul" style="margin-left: 1.65em;">
-            <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">La Grande, OR 97850, US</span>
-            </li>
-            <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2"><a href="mailto:go-stem@eou.edu">go-stem@eou.edu</a></span>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-      </div>
-      <!--Grid row-->
+<div class="container-flex" style="margin-top: 5vh;">
+  <!-- FORM -->
+  <div class="body container" >
+    <div style="text-align:center">
+      <h2 style="color: azure">Leave us a message:</h2>
     </div>
-    <!-- Grid container -->
-  </footer>
+    <div class="container">
+      <form method="POST" action="/contact" id="contactForm" enctype="application/x-www-form-urlencoded">
+        <label for="fname">First Name</label>
+        <input required type="text" id="fname" name="firstname" placeholder="Your first name..."/>
+        <label for="lname">Last Name</label>
+        <input required type="text" id="lname" name="lastname" placeholder="Your last name..."/>
+        <label for="email">Email</label>
+        <input required type="email" id="email" name="email" placeholder="example@example.com"/>
+        <br>
+        <label for="school">School</label>
+        <input required type="text" id="school" name="school" placeholder="Your school..."/>
+        <label for="county" >County</label>
+        <select required id="county" name="county">
+          <option value="">Select...</option>
+          <option value="baker">Baker</option>
+          <option value="grant">Grant</option>
+          <option value="harney">Harney</option>
+          <option value="morrow">Morrow</option>
+          <option value="umatilla">Umatilla</option>
+          <option value="union">Union</option>
+          <option value="wallowa">Wallowa</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="subject" style="margin-top: 20px;">Message</label>
+        <textarea required id="subject" name="subject" placeholder="Write something..." style="height:170px"></textarea>
+        <button class="btn btn-success" id="submit" type="submit" onclick="submitContact()">Submit</button>
+      </form>
+    </div>
+  </div>
 </div>
-<!-- End of .container -->
 
 <!-- Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

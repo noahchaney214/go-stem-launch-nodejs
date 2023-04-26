@@ -16,57 +16,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <style>
-
-    .profile img {
-      max-width: 300px;
-      min-width: 200px;
-    }
-
-
-    .profile .profile-body {
-      padding: 20px;
-      background: #f7f7f7;
-      width: 100%;
-
-    }
-
-    .profile .profile-bio {
-      background: #fff;
-      position: relative;
-      padding: 15px 10px 5px 15px;
-    }
-
-    .profile .profile-bio a {
-      left: 50%;
-      bottom: 20px;
-      margin: -62px;
-      text-align: center;
-      position: absolute;
-    }
-
-    .profile .profile-bio h2 {
-      margin-top: 0;
-      font-weight: 200;
-    }
-
-    .profile h3 {
-      color: #585f69;
-      margin-top: 5px;
-      text-shadow: none;
-      font-weight: normal;
-      font-family: 'Open Sans', sans-serif;
-    }
-    .profile h3 {
-      font-size: 24px;
-      line-height: 33px;
-    }
-
-    .profile p, .profile li, .profile li a {
-      color: #555;
-    }
-
-  </style>
+  <link rel="stylesheet" href="/profile.css">
 </head>
 <body>
 <!-- Navigation Bar -->
@@ -172,8 +122,10 @@
           <h5 class="text-uppercase mb-4 pb-1">Sign Up For Our Newsletter!</h5>
 
           <div class="form-outline form-white mb-4">
-            <label class="form-label" for="formControlLg" style="margin-left: 0px;">Email</label>
-            <input type="email" id="formControlLg" class="form-control form-control-lg"><button type="button" class="btn btn-primary mt-2" onclick="submit()">Submit</button>
+            <form method="POST" id="emailSubmit" enctype="application/x-www-form-urlencoded">
+              <label class="form-label" for="formControlLg" style="margin-left: 0px;">Email</label>
+              <input name="email" type="email" id="formControlLg" class="form-control form-control-lg"><button type="button" class="btn btn-primary mt-2" onclick="submit()">Submit</button>
+            </form>
             <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 48.8px;"></div><div class="form-notch-trailing"></div></div></div>
 
           <ul class="fa-ul" style="margin-left: 1.65em;">

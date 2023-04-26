@@ -2,12 +2,16 @@
 const express = require('express');
 const indexRouter = require('./routes/index');
 const path = require("path");
-const bodyParser = require("body-parser");
+const bodyParser = require('body-parser');
 const app = express(); //using express js as the main router for the web pages
+
+// handling post requests
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 
 // specify router
 app.use('/', indexRouter);
-app.use(express.urlencoded({ extended: true }));
 
 // these 3 lines add jquery and bootstrap libraries
 app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')))
@@ -32,7 +36,5 @@ app.use('/favicon.ico', express.static('/public/img/favicon.ico'));
 app.use((req, res, next) => {
     res.status(404).render('404', { page: 'Page not found' });
 });
-
-app.use(bodyParser.urlencoded());
 
 app.listen(3000, console.log('Server is listening at port 3000.'));
