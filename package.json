@@ -1,31 +1,35 @@
 {
-  "name": "go-stem-launch-node",
+  "name": "go-stem-launch-site",
   "version": "1.0.0",
-  "description": "GO STEM's new and improved landing site.",
+  "description": "GO STEM's launch site",
   "main": "server.js",
-  "type": "module",
   "scripts": {
-    "watch": "nodemon server.js"
+    "start": "nodemon server.js"
   },
-  "keywords": [],
-  "author": "noahchaney",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noahchaney214/go-stem-launch-nodejs.git"
+  },
+  "keywords": [
+    "go",
+    "stem",
+    "go-stem"
+  ],
+  "author": "Noah Chaney",
   "license": "ISC",
-  "homepage": "https://go-stem.org/",
+  "bugs": {
+    "url": "https://github.com/noahchaney214/go-stem-launch-nodejs/issues"
+  },
+  "homepage": "https://github.com/noahchaney214/go-stem-launch-nodejs#readme",
   "dependencies": {
     "body-parser": "^1.20.2",
-    "bootstrap": "^5.2.3",
-    "cors": "^2.8.5",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "express-session": "^1.17.3",
-    "jquery": "^3.6.4",
-    "lru-cache": "^9.1.0",
     "mysql": "^2.18.1",
-    "node-fetch": "^3.3.1",
+    "node-cache": "^5.1.2",
     "nodemailer": "^6.9.1",
-    "serve-favicon": "^2.5.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.22"
+    "nodemailer-express-handlebars": "^6.1.0",
+    "path": "^0.12.7",
+    "pm2": "^5.3.0"
   }
 }

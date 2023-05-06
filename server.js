@@ -9,7 +9,7 @@ const app = express(); //using express js as the main router for the web pages
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
+ 
 // specify router
 app.use('/', indexRouter);
 
@@ -28,13 +28,13 @@ app.use(express.static(path.join(__dirname, '/public/img')));
 app.use(express.static(path.join(__dirname, '/public/js')));
 app.use(express.static(path.join(__dirname, '/public/css')));
 app.use(express.static(path.join(__dirname, '/public/img/staff')));
-
+//
 // set the favicon for the browser
 app.use('/favicon.ico', express.static('/public/img/favicon.ico'));
 
 // 404 error handler
 app.use((req, res, next) => {
     res.status(404).render('404', { page: 'Page not found' });
-});
+}); 
 
 app.listen(3000, console.log('Server is listening at port 3000.'));
