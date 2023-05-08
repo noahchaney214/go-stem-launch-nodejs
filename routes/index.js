@@ -80,7 +80,7 @@ router.post('/action_page', urlencodedParser, async (req, res) => {
     if (`${req.body.email}` !== "undefined" || `${req.body.email}`.length <= 1){
         await conn(`INSERT IGNORE INTO news_emails (email) values (\"${req.body.email}\")`);
     }
-    res.render('action_page', { page: 'Action Page' })
+    res.render('action_page', { page: 'Contact Page' })
 })
 
 // this router performs a query to the mysql database, then populates
@@ -102,6 +102,7 @@ router.post('/team', urlencodedParser, (req, res) => {
     }    
     res.render('team', {page: 'Meet the Team'});
 })
+
 
 
 
