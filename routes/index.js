@@ -37,6 +37,39 @@ router.post('/about', urlencodedParser, async (req, res) => {
     res.render('about', { page: 'About' });
 })
 
+router.get('/students', (req, res, next) => {
+    res.render('students', { page: 'For Students' });
+});
+
+router.post('/students', urlencodedParser, async (req, res) => {
+    if (`${req.body.email}` !== "undefined" || `${req.body.email}`.length <= 1){
+        await conn(`INSERT IGNORE INTO news_emails (email) values (\"${req.body.email}\")`);
+    }    
+    res.render('students', { page: 'For Students' });
+})
+
+router.get('/educators', (req, res, next) => {
+    res.render('educators', { page: 'For Educators' });
+});
+
+router.post('/educators', urlencodedParser, async (req, res) => {
+    if (`${req.body.email}` !== "undefined" || `${req.body.email}`.length <= 1){
+        await conn(`INSERT IGNORE INTO news_emails (email) values (\"${req.body.email}\")`);
+    }    
+    res.render('educators', { page: 'For Educators' });
+})
+
+router.get('/business', (req, res, next) => {
+    res.render('business', { page: 'For Businesses and Partners' });
+});
+
+router.post('/business', urlencodedParser, async (req, res) => {
+    if (`${req.body.email}` !== "undefined" || `${req.body.email}`.length <= 1){
+        await conn(`INSERT IGNORE INTO news_emails (email) values (\"${req.body.email}\")`);
+    }    
+    res.render('business', { page: 'For Businesses and Partners' });
+})
+
 router.get('/contact', (req, res, next) => {
     res.render('contact', { page: 'Contact Us' });
 });
@@ -90,10 +123,9 @@ router.get('/team', async (req, res, next) => {
         res.render('team', {page: 'Meet the Team', teamData: teamCache.get('team')});
     }else{
         const q = await conn("SELECT * FROM employees;");
-        teamCache.set('team', q, 900);
+        teamCache.set('team', q, 300);
         res.render('team', {page: 'Meet the Team', teamData: q});
     }
-    
 });
 
 router.post('/team', urlencodedParser, (req, res) => {

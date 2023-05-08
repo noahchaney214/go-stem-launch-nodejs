@@ -53,7 +53,7 @@ body {
 
 .carousel button {
     border: none;
-    background-color: rgba(20, 100, 0, 3);
+    background-color: rgb(15, 20, 180);
     max-width: 10%;
 }
 
